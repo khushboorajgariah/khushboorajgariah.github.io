@@ -1,7 +1,7 @@
 import moment from 'moment'
 
 const formatIntoTimeAgo = (milliseconds) => {
-        let suffix = 'from now';
+        let suffix = ' from now';
 
         if (Math.abs(moment().diff(milliseconds)) < 25000) {
             return 'just now';
