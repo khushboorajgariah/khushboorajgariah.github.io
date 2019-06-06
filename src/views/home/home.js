@@ -1,20 +1,58 @@
 import React, { Component, Fragment as F } from 'react';
 import { connect } from 'react-redux';
 import TitleBar from "../../components/TitleBar/index";
-import Modal from "../../components/modal/index";
+import Modal from "../../components/Modal/index";
 import {commonConstants} from "../../constants";
 import DateUtil from '../../utils/dateUtil'
 import actions from './actions'
 import './home.css'
+import {Button} from "../../components/Button/index";
 
 class Home extends Component {
 
     constructor(props) {
         super(props);
+        this.onChangeTime = this.onChangeTime.bind(this);
+        this.onAddCampaign = this.onAddCampaign.bind(this);
     }
 
     componentWillMount() {
         this.props.getAllCampaigns();
+    }
+
+    onAddCampaign(campaign) {
+        let newCampaign = JSON.parse(JSON.stringify(campaign)),
+            { rescheduleTime } = this.props.home;
+
+        newCampaign.createdOn = rescheduleTime;
+
+        this.props.addCampaign(newCampaign);
+    }
+
+    onClickReschedule() {
+        this.props.setRescheduleTime('');
+    }
+
+    onChangeTime(event) {
+        let newTime = DateUtil.convertHtmlDateIntoMilliseconds(event.target.value);
+
+        this.props.setRescheduleTime(newTime);
+    }
+
+    getRescheduleContent(campaign) {
+        let { rescheduleTime } = this.props.home;
+
+        return (
+            <F>
+                <div>
+                    <label>Date</label>
+                    <input type='date' value={DateUtil.convertMillisecondsIntoHtmlTime(rescheduleTime)} onChange={this.onChangeTime}/>
+                </div>
+                <div className={'cta-container'}>
+                    <Button solid text={'Create'} onClick={()=>this.onAddCampaign(campaign)}/>
+                </div>
+            </F>
+        )
     }
 
     renderStaticColumns(campaign) {
@@ -27,7 +65,7 @@ class Home extends Component {
                 <td>
                     <Modal trigger={<div className={'inline-block'}>CSV</div>} content={<div><h4>{name}</h4><h5>{csv}</h5></div>}/>
                     <Modal trigger={<div className={'inline-block'}>Report</div>} content={<div><h4>{name}</h4><h5>{report}</h5></div>}/>
-                    <Modal trigger={<div className={'inline-block'}>Schedule Again</div>} content={<div><h4>{name}</h4><h5>{price}</h5></div>}/>
+                    <Modal trigger={<div className={'inline-block'} onClick={this.onClickReschedule}>Schedule Again</div>} content={this.getRescheduleContent(campaign)}/>
                 </td>
             </F>
         )
@@ -36,10 +74,10 @@ class Home extends Component {
     renderTableRows() {
         let { campaigns = [] } = this.props.home;
 
-        return campaigns.map((campaign) => {
+        return campaigns.map((campaign, index) => {
             let { createdOn, name, region } = campaign;
             return (
-                <tr>
+                <tr key={index}>
                     <td>{DateUtil.formatIntoTimeAgo(createdOn)}</td>
                     <td>
                         <div>{name}</div>
@@ -91,6 +129,12 @@ const mapDispatchToProps = (dispatch) => {
     return {
         getAllCampaigns: () => {
             dispatch(actions.getAllCampaigns());
+        },
+        addCampaign: (campaign) => {
+            dispatch(actions.addCampaign(campaign));
+        },
+        setRescheduleTime: (time) => {
+            dispatch(actions.setRescheduleTime(time));
         }
     }
 };

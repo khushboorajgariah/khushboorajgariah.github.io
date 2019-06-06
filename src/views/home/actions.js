@@ -39,6 +39,18 @@ const actions = {
             type: 'GET_ALL_CAMPAIGNS',
             payload: dummyResponse
         }
+    },
+    addCampaign: (campaign) => {
+        return {
+            type: 'ADD_CAMPAIGN',
+            payload: campaign
+        }
+    },
+    setRescheduleTime: (time) => {
+        return {
+            type: 'SET_RESCHEDULE_TIME',
+            payload: time
+        }
     }
 };
 

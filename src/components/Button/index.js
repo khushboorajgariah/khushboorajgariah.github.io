@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 
 export const Button = (props) => {
-    let className = 'custom-btn', iconClass = 'button-icon-left';
+    let className = 'custom-btn', iconClass = 'Button-icon-left';
     let onClick = props.onClick;
 
     let addClass = (classToAdd) => {

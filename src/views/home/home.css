@@ -3,6 +3,9 @@
   .home .content .heading {
     font-size: 32px;
     text-align: center; }
+  .home .content .cta-container {
+    float: right;
+    text-align: center; }
   .home .content table {
     margin-top: 50px; }
     .home .content table thead {
