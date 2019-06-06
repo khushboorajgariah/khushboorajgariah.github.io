@@ -1,0 +1,56 @@
+@import "../../stylesheets/variables.scss";
+$color-background-secondary: #ffffff !default;
+$border-color:#d9d9d9;
+$subheader-color:#aaa;
+$width: 2.4rem;
+
+.popup{
+  text-align: initial;
+  .modal {
+    font-size: 12px;
+
+    .Loading__loading___1m_fZ{
+      top: 0;
+    }
+  }
+  .popup-header {
+    border-bottom: 1px solid $border-color;
+    font-size: $font-size-xlarge;
+    padding: $width;
+    line-height: 1.2;
+    font-weight: 600;
+    .sub-header{
+      font-weight: 500;
+      font-size: 16px;
+      margin-top: 4px;
+      color:$subheader-color;
+    }
+  }
+  .popup-content{
+    border-radius: 3px;
+    width: auto !important;
+    padding: $gutter-width;
+    min-width: 400px;
+    height: auto;
+    max-height: 700px;
+    overflow-y: scroll;
+    font-size: 1.5rem;
+  }
+  .close {
+    cursor: pointer;
+    position: absolute;
+    padding: 5px 8px;
+    right: 5px;
+    top: 8px;
+    font-size: 24px;
+  }
+  .actions {
+    padding: $width;
+    margin-top: $width;
+    border-top: solid 1px $border-color;
+    text-align: right;
+    button{
+      margin-left: $width;
+    }
+  }
+}

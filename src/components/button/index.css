@@ -1,0 +1,33 @@
+.custom-btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: #eeeeee;
+  color: #4a4a4a;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
+  .custom-btn .button-content {
+    display: -webkit-box; }
+  .custom-btn.solid {
+    background-image: -webkit-linear-gradient(156deg, #00adb7, #12c2b1);
+    background-image: -o-linear-gradient(156deg, #00adb7, #12c2b1);
+    background-image: linear-gradient(294deg, #00adb7, #12c2b1);
+    color: white;
+    box-shadow: 2px 2px 4px 0 rgba(0, 173, 183, 0.2);
+    transition: all 200ms linear; }
+    .custom-btn.solid:hover {
+      background-image: -webkit-linear-gradient(156deg, #158186, #12C2C1);
+      background-image: -o-linear-gradient(156deg, #158186, #12C2C1);
+      background-image: linear-gradient(294deg, #158186, #12C2C1); }
+    .custom-btn.solid:active {
+      background-color: #00868f; }
+  .custom-btn:hover {
+    background-color: #d2d2d2;
+    cursor: pointer; }
+  .custom-btn.disabled {
+    background-color: #eeeeee;
+    background-image: none;
+    cursor: auto; }
+
+/*# sourceMappingURL=index.css.map */

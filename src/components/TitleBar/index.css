@@ -1,0 +1,16 @@
+.title-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: -webkit-linear-gradient(180deg, rgba(0, 0, 128, 0.75), navy);
+  padding: 1.5rem; }
+  .title-bar .logo {
+    width: 100px;
+    height: auto; }
+  .title-bar .app-version {
+    font-size: 2rem;
+    color: white;
+    float: right; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,86 @@
+@import "variables.scss";
+
+html {
+  font-size: 62.5%;
+  overflow: scroll;
+}
+
+html, body, main {
+  padding: 0;
+  margin-left:0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: "Cairo", sans-serif;
+  background-color: $bg-color;
+  color: $font-color;
+  letter-spacing: 0.02rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 3rem;
+  font-size: $font-size-large;
+  margin-top: 60px;
+}
+
+input {
+  outline: none;
+  padding: 1rem;
+  background: transparent;
+  border: solid 1px $border-color;
+  border-radius: 5px;
+}
+
+.hidden{
+  display: none !important;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.secondary-font-color {
+  color: $secondary-font-color;
+}
+
+.small {
+  font-size: $font-size-medium;
+}
+
+.card {
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 2px;
+}
+
+.upper-case {
+  text-transform: uppercase;
+}
+
+.center-align {
+  text-align: center;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+.divider {
+  border-top: solid 1px #e0e0e0;
+  margin: $gutter-width 0;
+}
+
+a{
+  text-decoration: none;
+  color: $font-color;
+}
+

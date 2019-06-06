@@ -1,0 +1,21 @@
+.net-banking .default-banks .bank-name {
+  font-size: 18px;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #00adb7;
+  position: relative;
+  margin: 0 1.5rem;
+  border: solid 1px #ebebeb; }
+  .net-banking .default-banks .bank-name span {
+    position: absolute;
+    top: 23px;
+    left: 16px;
+    color: #ebebeb; }
+.net-banking .search-container {
+  margin-top: 1.5rem; }
+  .net-banking .search-container input {
+    font-size: 18px; }
+
+/*# sourceMappingURL=index.css.map */

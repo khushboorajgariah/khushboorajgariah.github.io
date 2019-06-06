@@ -1,0 +1,52 @@
+@import "../../stylesheets/variables.scss";
+
+$solid-disabled-bg: rgba(0, 173, 183, 0.3);
+$solid-active-bg: #00868f;
+$solid-hover-bg: #009ca6;
+$hover-bg: #d2d2d2;
+$disabled-bg: #eeeeee;
+$button-shadow: 0 1px 1px 1px #ddd;
+$button-bg-color: #eeeeee;
+$solid-button-font-color: white;
+$success-disabled-font-color: rgba(0, 173, 183, 0.3);
+$width: 2.4rem;
+
+.custom-btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: $font-size-medium;
+  background-color: $button-bg-color;
+  color: $font-color;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  .button-content{
+    display: -webkit-box;
+  }
+  &.solid {
+    background-image: -webkit-linear-gradient(156deg, #00adb7, #12c2b1);
+    background-image: -o-linear-gradient(156deg, #00adb7, #12c2b1);
+    background-image: linear-gradient(294deg, #00adb7, #12c2b1);
+    color: $solid-button-font-color;
+    box-shadow: 2px 2px 4px 0 rgba(0, 173, 183, 0.2);
+    transition: all 200ms linear;
+    &:hover {
+      background-image: -webkit-linear-gradient(156deg, #158186, #12C2C1);
+      background-image: -o-linear-gradient(156deg, #158186, #12C2C1);
+      background-image: linear-gradient(294deg, #158186, #12C2C1);
+    }
+    &:active {
+      background-color: $solid-active-bg;
+    }
+  }
+
+  &:hover {
+    background-color: $hover-bg;
+    cursor: pointer;
+  }
+  &.disabled {
+    background-color: $disabled-bg;
+    background-image: none;
+    cursor: auto;
+  }
+}

@@ -1,0 +1,70 @@
+html {
+  font-size: 62.5%;
+  overflow: scroll; }
+
+html, body, main {
+  padding: 0;
+  margin-left: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: "Cairo", sans-serif;
+  background-color: #f5f5f5;
+  color: #4a4a4a;
+  letter-spacing: 0.02rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+.content {
+  padding: 3rem;
+  font-size: 16px;
+  margin-top: 60px; }
+
+input {
+  outline: none;
+  padding: 1rem;
+  background: transparent;
+  border: solid 1px #ebebeb;
+  border-radius: 5px; }
+
+.hidden {
+  display: none !important; }
+
+.inline-block {
+  display: inline-block; }
+
+.bold {
+  font-weight: 600; }
+
+.secondary-font-color {
+  color: rgba(0, 0, 0, 0.5); }
+
+.small {
+  font-size: 14px; }
+
+.card {
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 2px; }
+
+.upper-case {
+  text-transform: uppercase; }
+
+.center-align {
+  text-align: center; }
+
+.capitalize {
+  text-transform: capitalize; }
+
+.divider {
+  border-top: solid 1px #e0e0e0;
+  margin: 1.5rem 0; }
+
+a {
+  text-decoration: none;
+  color: #4a4a4a; }
+
+/*# sourceMappingURL=common.css.map */

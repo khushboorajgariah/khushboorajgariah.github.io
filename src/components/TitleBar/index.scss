@@ -1,0 +1,18 @@
+@import "../../stylesheets/variables.scss";
+.title-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: -webkit-linear-gradient(180deg,rgba(0,0,128,.75), rgba(0,0,128,1));
+  padding: $gutter-width;
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+  .app-version {
+    font-size: 2rem;
+    color: white;
+    float: right;
+  }
+}
